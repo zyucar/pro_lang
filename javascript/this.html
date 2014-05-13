@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript">
+	function ders(isim, kod, hoca, tarih){
+	this.isim=isim;
+	this.kod=kod;
+	this.hoca=hoca;
+	this.tarih=tarih;
+	this.kacsenedir=kacsenedir;
+	}	
+	function kacsenedir(){
+	var x= 2014- this.tarih;
+		return x;
+	}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	var ders1= new ders("javascript", 202, "Mesut", 2000);
+	var ders2= new ders("HTML", 206, "Caglar", 1998);
+	document.write(ders1.kacsenedir());
+	document.write("<br/>");
+	document.write(ders2.isim);
+</script>
+</body>
+</html>

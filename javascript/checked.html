@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset="utf-8">
+	<style type="text/css">
+	h2{color:blue;}
+	</style>
+</head>
+<body>
+<h2>Sayfamıza Hoşgeldiniz!</h2>
+<form name="Giris_alani">
+<fieldset><legend>Kullanıcı girişi</legend>
+<p id="kullan"/>Kullanıcı adı:<input type="text" name="kullanıcı adı"/></br>
+<p id="şifre"/>Şifre:<input type="passWord" name="şifre"/></br>
+<br/><input type="button" value="Gönder"/>
+</fieldset>
+</form>
+<form name="Anket_alani">
+<fieldset><legend>Anket alanı</legend>
+<b>1)</b> Mezun olduktan sonra nerede çalışmak istersiniz?<br/>
+<input type="checkbox" name="sorular" value="özel"/>Özel şirket
+<input type="checkbox" name="sorular" value="devlet"/>Devlet kurumu
+<input type="checkbox" name="sorular" value="kendi"/>Kendi şirketimde
+<input type="checkbox" name="sorular" value="istemiyor"/>Çalışmak istemiyorum
+<p/><br/><b>2)</b> Çalışmak istediğiniz saat aralığı?<br/> 
+<input type="checkbox" name="sorular" value="2-3"/>2-3 saat
+<input type="checkbox" name="sorular" value="4-5"/>4-5 saat
+<input type="checkbox" name="sorular" value="6-8"/>6-8 saat
+<input type="checkbox" name="sorular" value="0"/>Çalışmak istemiyorum
+<p/><br/><b>3)</b> Çalışma ortamınız nasıl olmalı?<br/>
+<input type="checkbox" name="sorular" value="yalnız"/>Kişisel odam olmalı
+<input type="checkbox" name="sorular" value="toplu ortam"/>Arkadaş ortamında da çalışabilirim
+<input type="checkbox" name="sorular" value="her şekilde"/>Her şekilde çalışırım
+<input type="checkbox" name="sorular" value="konum"/>Konumuma göre bir yerde çalışmak isterim
+</fieldset>
+</form>
+<script type="text/javascript">
+	function checker() {
+		var uzunluk = document.Anket_alani.length;
+		var liste = new Array();
+		
+		for(var i=0; i<uzunluk ; i++){
+			if(document.Anket_alani.elements[i].checked==true)
+			{
+			liste.push(document.Anket_alani.elements[i].value);
+			}
+		}
+		alert("Ekranda seçili olanlar:"+liste.join());
+	
+	}
+</script>
+<input type="button" value="check kontrol" onclick="checker()"/>
+</body>
+</html>
