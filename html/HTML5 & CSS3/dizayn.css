@@ -1,0 +1,11 @@
+h1{color:red;
+  font-family:Tahoma;
+  text-align:center;}
+tr[value^=A]{background-color:orange;
+		font-weight:bold;}
+tr[value^=Ü]{font-weight:bold;
+		color:blue;
+		text-align:center;}		
+table{position:relative; left:10%;}
+tr#ilk_satır{font-style:italic; }
+tr[value$="R"]{background-color:gray;}
