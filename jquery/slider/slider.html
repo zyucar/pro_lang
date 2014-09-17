@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+	<title></title>
+	<script src ="jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+	<script>
+	$(document).ready(function(){
+		$('p').text($('#resim li img').eq(0).attr('alt'))
+
+
+		var Slider = 0;
+		$.Slider =function(toplam){
+			
+			$("#slider ul#btn li").removeClass("aktif");
+			$("#slider ul#resim li").hide();
+			if (Slider < toplam-1){
+				Slider++;
+
+				$("#slider ul#btn li:eq("+Slider+")").addClass("aktif");
+				$("#slider ul#resim li:eq("+Slider+")").fadeIn("fast");
+				$('p').text($('#resim li img').eq(Slider).attr('alt'))
+
+			}
+			else{
+
+				$("#slider ul#btn li:first").addClass("aktif");
+				$("#slider ul#resim li").hide();
+				$("#slider ul#resim li:first").show();
+				$('p').text($('#resim li img').eq(Slider).attr('alt'))
+
+				Slider = 0;
+
+			}
+		}
+		
+
+		var toplamLi = $("#slider ul#resim li").length;
+		var interval = setInterval('$.Slider('+toplamLi+')', 2000);
+		$("#slider").hover(function(){
+			clearInterval(interval);
+		}, function(){
+			interval = setInterval('$.Slider('+toplamLi+')', 2000);
+
+		});
+		
+
+		$("#slider ul#btn li:first").addClass("aktif");
+		$("#slider ul#resim li").hide();
+		$("#slider ul#resim li:first").show();
+
+		$("#slider ul#btn li").click(function(){
+			var indis = $(this).index();
+			$("#slider ul#btn li").removeClass("aktif");
+			$(this).addClass("aktif");
+			$("#slider ul#resim li").hide();
+			$("#slider ul#resim li:eq("+indis+")").fadeIn("fast");
+			$('p').text($('#resim li img').eq(indis).attr('alt'))
+			Slider = indis;
+			return false
+
+		});
+		
+		$("a.once").click(function(){
+			$("#slider ul#btn li").removeClass("aktif");
+			$("#slider ul#resim li").hide();
+			Slider--;
+			$("#slider ul#btn li:eq("+Slider+")").addClass("aktif");
+			$("#slider ul#resim li:eq("+Slider+")").fadeIn("fast");
+			$('p').text($('#resim li img').eq(Slider).attr('alt'))
+
+			
+			
+		});
+		$("a.sonra").click(function(){
+			$("#slider ul#btn li").removeClass("aktif");
+			$("#slider ul#resim li").hide();
+			Slider++;
+			$("#slider ul#btn li:eq("+Slider+")").addClass("aktif");
+			$("#slider ul#resim li:eq("+Slider+")").fadeIn("fast");
+			$('p').text($('#resim li img').eq(Slider).attr('alt'))
+
+			
+			
+		});
+		
+		
+	});
+
+
+
+</script>
+
+</head>
+<body>
+	<div id="slider">
+		<p id='yaz'></p>
+		<div class = "slider">
+			<ul id="resim">
+				<li><a href="#"><img src="image/1.jpg" alt="-sahil-"></a></li>
+				<li><a href="#"><img src="image/2.jpg" alt="-yol-"></a></li>
+				<li><a href="#"><img src="image/3.jpg" alt="-vosvos-"></a></li>
+				<li><a href="#"><img src="image/4.jpg" alt="-penguen-"></a></li>
+				<li><a href="#"><img src="image/5.jpg" alt="-uzay-"></a></li>
+
+			</ul>
+		</div> 
+		
+
+		<ul id="btn">
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+		</ul>
+	</div>
+	<div id="yon">
+		<a href="#" class="once"><img src="image/p.png"></a>
+		<a href="#" class="sonra"><img src="image/n.png"></a>
+	</div>
+
+
+</body>
+</html>

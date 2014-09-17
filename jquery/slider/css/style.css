@@ -1,0 +1,89 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	
+}
+body{
+	background-image: url(../image/a.jpg);
+}
+
+ul{
+	list-style: none;
+}
+#slider{margin-left: 420px;
+	margin-top: 42px;
+	overflow: hidden;
+
+}
+.slider{
+	width: 600px; height: 340px; 
+
+}
+.slider ul#resim li {
+
+	width: 600px; height: 300px;
+
+}
+#btn{
+	margin-top: 107px;
+}
+#btn a {
+	height: 45px;
+	width: 41px;
+	display: block;
+	float: left;
+	margin-right: 1px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color: rgba(221, 221, 221, 0.5);
+	line-height: 52px;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+	margin-bottom: 4px;
+	text-decoration: none;
+	text-align: center;
+	position: relative;
+	left: 200px;
+
+
+}
+
+#btn li.aktif a{
+	border-radius: 50%;
+	z-index: 9999;
+	color: #FFF;
+	background-color: #68C1B5;
+	-webkit-transition: all 0.3s ease;
+
+}
+#resim img{
+	width: 670px;
+	height: 430px;
+	border: solid 4px black;
+}
+#yaz{
+	color:rgba(48, 149, 153, 0.97);
+	font-size: 23px;
+	font-style: inherit;
+	font-family: cursive;
+	width: 235px;
+	height: 40px;
+	margin-left: 195px;
+	border-radius: 42px;
+
+	text-align: center;
+	background-color: rgba(17, 47, 49, 0.5);
+}
+.once{
+	position: relative;
+	left: 360px;
+	bottom: 285px;
+}
+.sonra{
+	position: relative;
+	left:1085px;
+	bottom: 285px;
+}
