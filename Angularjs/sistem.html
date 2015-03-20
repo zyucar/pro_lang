@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
+<script src="sistem.js"></script>
+<style type="text/css">
+.Text{
+	 width: 520px;
+		 position: relative;
+		 left: 710px;
+		 bottom: 800px;
+}
+
+</style>
+</head>
+<body ng-app="myApp" ng-controller="control">
+<img id="iskelet" src="http://www.image-maps.com/m/private/0/3igebng41alduosigdvd4mpgp5_insan-iskelet-resmi.gif" border="0" width="500" height="881" orgWidth="500" orgHeight="881" usemap="#image-maps-2015-03-18-192256" alt="" />
+<map name="image-maps-2015-03-18-192256" id="ImageMapsCom-image-maps-2015-03-18-192256">
+
+
+
+<area ng-click="t = !t" id="kurekKmk" alt="Kürek kemiği" href="#" title="Kürek Kemiği" shape="rect" coords="335,169,413,212" style="outline:none;" target="_self"     />
+<div class="Text" ng-hide="t"> 
+<h3>Kürek Kemiği</h3>
+Kürek kemiği ya da omuz kemiği (Latince scapula tekil, scapulae çoğul), göğüs kafesinin arka kısmında bulunan, kolun gövdeye bitiştiği humerus kemiği ile omuz üstü köprücük kemiğini birleştiren yassı geniş kemik. Üçgen şekli bir küreği andırdığı için bu adı almıştır.
+</div>
+
+<area ng-click="toggle = !toggle" id="Boyun" alt="Boyun omurları" title="Boyun omurları" href="#" shape="rect" coords="269,94,395,131" style="outline:none;" target="_self"     />
+<div class="Text" ng-hide="toggle"> 
+<h3>Boyun Omurları</h3>
+Columna vertebralis 70 cm uzunluğundadır, içindeki omurilik ise 43-45 cm arasında değişir; yani omurilik columna vertebralis'ten daha kısadır. Omurga, kemikten, kıkırdaktan ya da her ikisinden oluşan iskeletin en önemli bölümü ve de temel eksenidir. Sırt boyunca uzanır ve vücuda destek sağlar.
+
+Omurga, yani kolumna vertebralis, omurlardan oluşmuş, içinde omuriliği barındıran kemik yapıdır.
+
+Omurgalılarda, Omurilik Beyin sapından başlayıp, omurga içinde ikinci bel omuruna kadar uzanan ve bundan sonra fibröz (bağdokusu) bir kordon şeklindeki filum terminale denen kısımla devam eden merkezi sinir sisteminin önemli bir parçası.
+</div>
+
+
+<area ng-click="togg = !togg" id="KafaTs" alt="Kafatası" href="#" title="Kafatası" shape="rect" coords="276,9,376,40" style="outline:none;" target="_self"     />
+<div class="Text" ng-hide="togg">
+<h3>Kafatası</h3>
+Kafatası (cranium), beyni çevreleyen ve oldukça güçlü bir kemikten koruma sistemidir. 8 farklı kemikten oluşmuştur. Kafatasının kemik yapısı kendine özgüdür. Kemiklerin birleşim noktaları girintili çıkıntılı bir yapıya sahiptir. Nedeni ise kafatası kemiklerinin birleşim noktalarının birbirine geçebilecek şekilde tasarlanmış olmasındandır.
+</div>
+
+
+<area ng-click="tog = !tog"  id="GgsKmk" alt="Göğüs kemiği" title="Göğüs kemiği" href="#" shape="rect" coords="21,167,121,210" style="outline:none;" target="_self"     />
+
+<div class="Text" ng-hide="tog">
+<h3>Göğüs Kafesi</h3>
+Göğüs kafesi, insan bedeninin, boyun ile karın arasında yer alan üst bölümüdür.
+12 omur, 12 çift kaburga, göğüs kemiği ve bunlara bağlı kaslar ile kas kılıflarından oluşan göğüs kafesi, karın boşluğundan diyafram aracılığıyla ayrılır. Solunum sisteminin başlıca organları ve dolaşım sistemi ile sindirim sisteminin bazı bölümleri göğüs boşluğu içinde yer alırlar. Akciğerler, göğüs boşluğunun yan bölümlerinde, kalp ve yemek borusuysa "mediyastin" adı verilen kendi içinde kapalı bir bölüm içinde bulunurlar (mediyastin, bu organlardan başka, kalpten çıkan büyük damarları soluk borusunu, timüs bezini ve bazı sinirleri de içine alır).
+</div>
+
+
+<area  ng-click="to = !to" id="kopruKemik" alt="Köprücük kemiği" title="Köprücük kemiği" href="#" shape="rect" coords="28,61,128,106" style="outline:none;" target="_self"    />
+<div class="Text" ng-hide="to">
+<h3>Köprücük Kemiği</h3>
+Köprücük kemiği (Latince clavicula), insan anatomisindeki sternum ile kürek kemiği arasında köprü görevi gören yetişkin bir insanda ortalama 15 cm boyundaki bir uzun kemiktir. Anatomik pozisyondayken yatay olarak bulunan tek uzun kemiktir.
+</div>
+
+</map>
+
+</body>
+</html>
